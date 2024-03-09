@@ -1,0 +1,49 @@
+
+Comandos importantes para se usar pelo terminal do computador:
+
+duda@duda-desktop:~$ mkdir git-project
+
+duda@duda-desktop:~$ cd git-project/
+
+duda@duda-desktop:~/git-project$ pwd
+/home/duda/git-project
+
+duda@duda-desktop:~/git-project$ git init hellogit
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Repositório vazio Git inicializado em  /home/duda/git-project/hellogit/.git/
+
+duda@duda-desktop:~/git-project$ cd hellogit/
+
+duda@duda-desktop:~/git-project$ cd hellogit/
+
+duda@duda-desktop:~/git-project/hellogit$ ls -al
+total 12
+drwxrwxr-x 3 duda duda 4096 mar  9 09:49 .
+drwxrwxr-x 3 duda duda 4096 mar  9 09:49 ..
+drwxrwxr-x 7 duda duda 4096 mar  9 09:49 .git
+
+duda@duda-desktop:~/git-project/hellogit$ cd .git/
+
+duda@duda-desktop:~/git-project/hellogit/.git$ ls
+branches  config  description  HEAD  hooks  info  objects  refs
+
+duda@duda-desktop:~/git-project/hellogit/.git$ cd ..
+
+duda@duda-desktop:~/git-project/hellogit$ git status
+No ramo master
+No commits yet
+nada para enviar (crie/copie arquivos e use "git add" para registrar)
+
+-------------------------------------------------------------------------------------------------
+
+Criando um novo repositório:
+
