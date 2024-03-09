@@ -55,6 +55,7 @@ nada para enviar (crie/copie arquivos e use "git add" para registrar)
 Criando um novo repositório:
 
 duda@duda-desktop:~/git-project/hellogit$ echo "It is just a demo file" >> test.txt
+(criando um arquivo test.txt"
 
 duda@duda-desktop:~/git-project/hellogit$ git status
 No ramo master
@@ -65,6 +66,7 @@ Arquivos não monitorados:
 nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
 
 duda@duda-desktop:~/git-project/hellogit$ git add test.txt
+(adicionando o arquivo na pasta hellogit)
 
 duda@duda-desktop:~/git-project/hellogit$ git status
 No ramo master
@@ -92,6 +94,8 @@ to set your account's default identity.
 Omit --global to set the identity only in this repository.
 fatal: unable to auto-detect email address (got 'duda@duda-desktop.(none)')
 
+(tentando fazer uma modificação no arquivo)
+
 duda@duda-desktop:~/git-project/hellogit$ git config --global user.email "eduarda.ebs@gmail.com"
 
 duda@duda-desktop:~/git-project/hellogit$ git config --global user.name "Eduarda"
@@ -100,6 +104,7 @@ duda@duda-desktop:~/git-project/hellogit$ git commit -m "A simple commit"
 [master (root-commit) 5c1c4e8] A simple commit
  1 file changed, 1 insertion(+)
  create mode 100644 test.txt
+(mudança realizada)
 
 duda@duda-desktop:~/git-project/hellogit$ git status
 No ramo master
@@ -108,6 +113,8 @@ Changes not staged for commit:
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   test.txt
 nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+
+(ERRO) 
 
 duda@duda-desktop:~/git-project/hellogit$ ls
 test.txt
