@@ -2,11 +2,14 @@
 Comandos importantes para se usar pelo terminal do computador:
 
 duda@duda-desktop:~$ mkdir git-project
+(criando uma pasta)
 
 duda@duda-desktop:~$ cd git-project/
+(entrando na pasta)
 
 duda@duda-desktop:~/git-project$ pwd
 /home/duda/git-project
+(pwd ??)
 
 duda@duda-desktop:~/git-project$ git init hellogit
 hint: Using 'master' as the name for the initial branch. This default branch name
@@ -20,23 +23,27 @@ hint: 'development'. The just-created branch can be renamed via this command:
 hint: 
 hint: 	git branch -m <name>
 Repositório vazio Git inicializado em  /home/duda/git-project/hellogit/.git/
+(inicializando o git)
 
 duda@duda-desktop:~/git-project$ cd hellogit/
-
-duda@duda-desktop:~/git-project$ cd hellogit/
+(entrando na pasta hellogit)
 
 duda@duda-desktop:~/git-project/hellogit$ ls -al
 total 12
 drwxrwxr-x 3 duda duda 4096 mar  9 09:49 .
 drwxrwxr-x 3 duda duda 4096 mar  9 09:49 ..
 drwxrwxr-x 7 duda duda 4096 mar  9 09:49 .git
+(mostrando todos os arquivos)
 
 duda@duda-desktop:~/git-project/hellogit$ cd .git/
+(entrando na pasta .git)
 
 duda@duda-desktop:~/git-project/hellogit/.git$ ls
 branches  config  description  HEAD  hooks  info  objects  refs
+(mostrando os arquivos que tem na pasta)
 
 duda@duda-desktop:~/git-project/hellogit/.git$ cd ..
+(saindo da pasta)
 
 duda@duda-desktop:~/git-project/hellogit$ git status
 No ramo master
@@ -47,3 +54,60 @@ nada para enviar (crie/copie arquivos e use "git add" para registrar)
 
 Criando um novo repositório:
 
+duda@duda-desktop:~/git-project/hellogit$ echo "It is just a demo file" >> test.txt
+
+duda@duda-desktop:~/git-project/hellogit$ git status
+No ramo master
+No commits yet
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+	test.txt
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+
+duda@duda-desktop:~/git-project/hellogit$ git add test.txt
+
+duda@duda-desktop:~/git-project/hellogit$ git status
+No ramo master
+No commits yet
+Mudanças a serem submetidas:
+  (utilize "git rm --cached <arquivo>..." para não apresentar)
+	new file:   test.txt
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   test.txt
+
+duda@duda-desktop:~/git-project/hellogit$ git commit -m "A simple commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+fatal: unable to auto-detect email address (got 'duda@duda-desktop.(none)')
+
+duda@duda-desktop:~/git-project/hellogit$ git config --global user.email "eduarda.ebs@gmail.com"
+
+duda@duda-desktop:~/git-project/hellogit$ git config --global user.name "Eduarda"
+
+duda@duda-desktop:~/git-project/hellogit$ git commit -m "A simple commit"
+[master (root-commit) 5c1c4e8] A simple commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+duda@duda-desktop:~/git-project/hellogit$ git status
+No ramo master
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   test.txt
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+
+duda@duda-desktop:~/git-project/hellogit$ ls
+test.txt
